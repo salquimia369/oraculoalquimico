@@ -1,0 +1,289 @@
+/* RESET BASE */
+body {
+  margin: 0;
+  background: #111214;
+  color: #e6e6e6;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 25%;
+  padding: 50px 40px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 2;
+
+  background: #111214;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  width: 66%;
+  padding: 60px 60px 80px;
+  position: relative;
+}
+
+/* glow subtil no fundo */
+.right-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%,    rgba(255,255,255,0.04), transparent 60%);
+  pointer-events: none;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #9aa4b2;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* INTRO */
+.intro {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  color: #c8d1dc;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+/* BOTÕES */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 11px;
+}
+
+button {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #cfd6df;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-family: 'Cinzel', serif;
+}
+
+button:hover {
+  background: #cfd6df;
+  color: #111214;
+  box-shadow: 0 0 12px rgba(201,169,110,0.25);
+}
+
+/* CARDS GRID */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* CARD BASE */
+.card {
+  background: linear-gradient(145deg, #1c1f24, #14161a);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 20px;
+  width: 220px;
+  border-radius: 14px;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* glow subtil */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 70%);
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+/* label pequena */
+.card-label {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #7f8a99;
+  margin-bottom: 6px;
+
+}
+/* TITULO CARD */
+.card h3 {
+  color: #f0f3f7;
+}
+
+/* TEXTO CARD */
+.card p {
+  color: #aeb6c2;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* TAROT ESPECÍFICO */
+.tarot-card img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+/* HEADER TAROT */
+.tarot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tarot-numero {
+  font-size: 1rem;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1380px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+  }
+
+  .right-panel {
+    width: 100%;
+    padding: 40px 20px;
+  }
+   .main-buttons {
+    justify-content: center;
+  }
+
+  .main-buttons button {
+    width: 100%;
+  }
+  .secondary-buttons {
+    flex-direction: column;
+    margin-top: 3%;
+  }
+   .secondary-buttons button {
+    width: 100%;
+  }
+}
+.result-block {
+  margin-bottom: 40px;
+}
+/* estado inicial escondido */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 1.6s ease forwards;
+}
+
+@media (max-width: 900px) {
+.card {
+    padding: 13px;
+    width: 200px;
+   }
+  }
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#zoom-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+.reset-btn {
+  flex: 1;
+
+  background: rgba(180,60,60,0.08);
+  border: 1px solid rgba(180,60,60,0.35);
+  color: #d89a9a;
+
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  background: rgba(180,60,60,0.2);
+  color: #fff;
+  border-color: rgba(180,60,60,0.6);
+}
+.main-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.full-btn {
+  flex: 1;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #e6e6e6;
+
+  padding: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.full-btn:hover {
+  background: #e6e6e6;
+  color: #111;
+}

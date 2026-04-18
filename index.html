@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Oráculo Alquímico</title>
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+
+    <h1>Oráculo Alquímico</h1>
+
+    <p class="intro">
+  Pare por um momento.<br><br>
+  Respire.<br><br>
+  Traga à consciência a sua questão.<br><br>
+  Quando estiver pronto, permita que o Oráculo revele a energia presente.
+</p>
+
+    <!-- ORÁCULO -->
+    <div class="section">
+  <h2>Oráculo</h2>
+
+  <!-- BOTÕES PRINCIPAIS -->
+  <div class="buttons main-buttons">
+    <button type="button" onclick="gerarSubstancia()">Substância</button>
+    <button type="button" onclick="gerarElemento()">Elemento</button>
+    <button type="button" onclick="gerarChakra()">Chakra</button>
+    <button type="button" onclick="gerarArquetipo()">Arquétipo</button>
+  </div>
+
+  <!-- AÇÕES -->
+  <div class="buttons secondary-buttons">
+    <button class="full-btn" onclick="gerarOraculo()">Oráculo Completo</button>
+    <button class="reset-btn" onclick="limparTudo()">Limpar</button>
+  </div>
+</div>
+
+    <!-- TAROT -->
+    <div class="section">
+      <h2>Tarot</h2>
+      <div class="buttons">
+        <button type="button" onclick="gerarTarot(1)">1 Carta</button>
+        <button type="button" onclick="gerarTarot(3)">3 Cartas</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+
+    <!-- RESULTADO ORÁCULO -->
+    <div id="resultado" class="result-block"></div>
+
+    <!-- RESULTADO TAROT -->
+    <div id="tarot" class="result-block"></div>
+
+  </div>
+
+</div>
+
+<!-- DATA -->
+<script src="data/elementos.js"></script>
+<script src="data/substancias.js"></script>
+<script src="data/chakras.js"></script>
+<script src="data/arquetipos.js"></script>
+<script src="data/tarot.js"></script>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+<div id="zoom-overlay" onclick="fecharZoom()">
+  <img id="zoom-img" src="">
+</div>
+
+</body>
+</html>
