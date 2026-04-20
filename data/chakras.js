@@ -1,9 +1,9 @@
 const chakras = [
-  { nome: "Básico", numero: 1, simbolo: "🔴", descricao: "- • - • -" },
-  { nome: "Esplénico", numero: 2, simbolo: "🟠", descricao: "- • - • -" },
-  { nome: "Umbilical", numero: 3, simbolo: "🟡", descricao: "- • - • -" },
-  { nome: "Cardíaco", numero: 4, simbolo: "🟢", descricao: "- • - • -" },
-  { nome: "Laríngeo", numero: 5, simbolo: "🔵", descricao: "- • - • -" },
-  { nome: "Frontal", numero: 6, simbolo: "🟣", descricao: "- • - • -" },
-  { nome: "Coronário", numero: 7, simbolo: "⚪", descricao: "- • - • -" }
+  { numero: "1º", nome: "Básico", simbolo: "🔴", descricao: "- • - • -" },
+  { numero: "2º", nome: "Esplénico", simbolo: "🟠", descricao: "- • - • -" },
+  { numero: "3º", nome: "Umbilical", simbolo: "🟡", descricao: "- • - • -" },
+  { numero: "4º", nome: "Cardíaco", simbolo: "🟢", descricao: "- • - • -" },
+  { numero: "5º", nome: "Laríngeo", simbolo: "🔵", descricao: "- • - • -" },
+  { numero: "6º", nome: "Frontal", simbolo: "🟣", descricao: "- • - • -" },
+  { numero: "7º", nome: "Coronário", simbolo: "⚪", descricao: "- • - • -" }
 ];

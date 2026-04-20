@@ -9,10 +9,10 @@ function revelarHTML(targetId, html) {
   const prevHeight = el.offsetHeight;
   el.style.minHeight = prevHeight + "px";
 
-  window.scrollTo({
+  /*window.scrollTo({
     top: el.offsetTop - 60,
     behavior: "smooth"
-  });
+  });*/
 
   el.innerHTML = "";
 
@@ -40,17 +40,17 @@ function gerarOraculo() {
 
   mostrarResultado(`
     <div class="card">
-      <h4 class="card-label">Elemento</h4>
-      <h3>${e.simbolo} ${e.nome}</h3>
-      <p>${e.descricao}</p>
-    </div>
-
-    <div class="card">
       <h4 class="card-label">Substância</h4>
       <h3>${s.simbolo} ${s.nome}</h3>
       <p>${s.descricao}</p>
     </div>
 
+    <div class="card">
+      <h4 class="card-label">Elemento</h4>
+      <h3>${e.simbolo} ${e.nome}</h3>
+      <p>${e.descricao}</p>
+    </div>
+   
     <div class="card">
       <h4 class="card-label">Chakra</h4>
       <h3>${c.simbolo} ${c.nome} ${c.numero}</h3>
@@ -93,7 +93,7 @@ function gerarChakra() {
   mostrarResultado(`
     <div class="card">
       <h4 class="card-label">Chakra</h4>
-      <h3>${c.simbolo} ${c.nome} ${c.numero}</h3>
+      <h3>${c.numero} ${c.nome} ${c.simbolo}</h3>
       <p>${c.descricao}</p>
     </div>
   `);
