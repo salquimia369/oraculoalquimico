@@ -15,7 +15,7 @@ body {
 /* LEFT PANEL */
 .left-panel {
   width: 25%;
-  padding: 50px 40px;
+  padding: 40px 30px;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -75,8 +75,15 @@ p {
   font-family: 'Cinzel', serif;
   font-size: 1.25rem;
   color: #c8d1dc;
-  margin-bottom: 50px;
   line-height: 1.6;
+}
+/* perguntasexemplo */
+.perguntasexemplo {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-top: 6px;
+  font-style: italic;
+  margin-left:10px;
 }
 
 /* BOTÕES */
@@ -95,6 +102,7 @@ button {
   cursor: pointer;
   transition: 0.25s;
   font-family: 'Cinzel', serif;
+  flex-grow: 1;
 }
 
 button:hover {
@@ -112,14 +120,16 @@ button:hover {
 }
 
 /* CARD BASE */
+
+
 .card {
-  background: linear-gradient(145deg, #1c1f24, #14161a);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 20px;
-  width: 220px;
-  border-radius: 14px;
-  transition: 0.3s;
-  position: relative;
+    border-radius: 18px;
+    transition: 0.3s;
+    position: relative;
+    padding: 20px;
+    width: 220px;
+    border: 1px solid transparent;
+    background: linear-gradient(145deg, #1c1f24, #14161a) padding-box, linear-gradient(to top left, #67676729, #d9d5d57d) border-box;
 }
 
 /* glow subtil */
@@ -132,7 +142,7 @@ button:hover {
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform:scale(1.04);
   border-color: rgba(255,255,255,0.2);
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
@@ -140,7 +150,7 @@ button:hover {
 .card-label {
   font-size: 0.75rem;
   letter-spacing: 1px;
-  color: #7f8a99;
+  color: #FFFFFF;
   margin-bottom: 6px;
 
 }
@@ -151,21 +161,240 @@ button:hover {
 
 /* TEXTO CARD */
 .card p {
-  color: #aeb6c2;
+  color: #ffffff;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
+}
+/* ELEMENTOS CUSTOMIZADOS */
+/* FOGO */
+.card.elemento.fogo {
+  background:
+    linear-gradient(145deg, #ff2f00bf, #14161a) padding-box,
+    linear-gradient(to top left, #67676729, #d9d5d57d) border-box;
+  border: 1px solid transparent;
+}
+
+/* AR */
+.card.elemento.ar {
+  background:
+    linear-gradient(145deg, #dfe6ec, #14161a) padding-box,
+    linear-gradient(to top left, #ffffff33, #d9d5d57d) border-box;
+  border: 1px solid transparent;
+}
+
+/* ÁGUA */
+.card.elemento.agua {
+  background:
+    linear-gradient(145deg, #1e6fffcc, #14161a) padding-box,
+    linear-gradient(to top left, #4aa3ff66, #d9d5d57d) border-box;
+  border: 1px solid transparent;
+}
+
+/* TERRA */
+.card.elemento.terra {
+  background:
+    linear-gradient(145deg, #25790f, #14161a) padding-box,
+    linear-gradient(to top left, #7a9c5a55, #d9d5d57d) border-box;
+    border: 1px solid transparent;
+}
+.card.arquetipo {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.card.arquetipo.vermelho {  background:
+    linear-gradient(145deg, #ff3b3bcc, #14161a) padding-box,
+    linear-gradient(to top left, #ff8a8a55, #ffffff22) border-box; }
+.card.arquetipo.laranja { background:
+    linear-gradient(145deg, #ff8c3acc, #14161a) padding-box,
+    linear-gradient(to top left, #ffc27a55, #ffffff22) border-box; }
+.card.arquetipo.amarelo { background:
+    linear-gradient(145deg, #ffd93bcc, #14161a) padding-box,
+    linear-gradient(to top left, #fff2a855, #ffffff22) border-box; }
+.card.arquetipo.verde { background:
+    linear-gradient(145deg, #3bd16fcc, #14161a) padding-box,
+    linear-gradient(to top left, #a8f0c555, #ffffff22) border-box; }
+.card.arquetipo.azul-claro { background:
+    linear-gradient(145deg, #3bb8ffcc, #14161a) padding-box,
+    linear-gradient(to top left, #a8dcff55, #ffffff22) border-box; }
+.card.arquetipo.indigo { background:
+    linear-gradient(145deg, #5a4bffcc, #14161a) padding-box,
+    linear-gradient(to top left, #b0a8ff55, #ffffff22) border-box; }
+.card.arquetipo.violeta { background:
+    linear-gradient(145deg, #b84bffcc, #14161a) padding-box,
+    linear-gradient(to top left, #e0a8ff55, #ffffff22) border-box; }
+
+
+/* BASE CHAKRA */
+.card.chakra {
+  border: 1px solid transparent;
+}
+
+/* 1 - Vermelho */
+.card.chakra.vermelho {
+  background:
+    linear-gradient(145deg, #ff3b3bcc, #14161a) padding-box,
+    linear-gradient(to top left, #ff8a8a55, #ffffff22) border-box;
+}
+
+/* 2 - Laranja */
+.card.chakra.laranja {
+  background:
+    linear-gradient(145deg, #ff8c3acc, #14161a) padding-box,
+    linear-gradient(to top left, #ffc27a55, #ffffff22) border-box;
+}
+
+/* 3 - Amarelo */
+.card.chakra.amarelo {
+  background:
+    linear-gradient(145deg, #ffd93bcc, #14161a) padding-box,
+    linear-gradient(to top left, #fff2a855, #ffffff22) border-box;
+}
+
+/* 4 - Verde */
+.card.chakra.verde {
+  background:
+    linear-gradient(145deg, #3bd16fcc, #14161a) padding-box,
+    linear-gradient(to top left, #a8f0c555, #ffffff22) border-box;
+}
+
+/* 5 - Azul claro */
+.card.chakra.azul-claro {
+  background:
+    linear-gradient(145deg, #3bb8ffcc, #14161a) padding-box,
+    linear-gradient(to top left, #a8dcff55, #ffffff22) border-box;
+}
+
+/* 6 - Índigo */
+.card.chakra.indigo {
+  background:
+    linear-gradient(145deg, #5a4bffcc, #14161a) padding-box,
+    linear-gradient(to top left, #b0a8ff55, #ffffff22) border-box;
+}
+
+/* 7 - Violeta */
+.card.chakra.violeta {
+  background:
+    linear-gradient(145deg, #b84bffcc, #14161a) padding-box,
+    linear-gradient(to top left, #e0a8ff55, #ffffff22) border-box;
+}
+/* BASE */
+.card.substancia {
+  border: 1px solid transparent;
+}
+
+/* SULPHUR — fogo + terra */
+.card.substancia.sulphur {
+  background:
+    linear-gradient(145deg, #ff5a2fcc, #c9a23a99, #14161a) padding-box,
+    linear-gradient(to top left, #ffb34755, #8a6b2f55) border-box;
+}
+
+/* SAL — branco / integrador */
+.card.substancia.sal {
+  background:
+    linear-gradient(145deg, #f2f2f2cc, #cfcfcfaa, #14161a) padding-box,
+    linear-gradient(to top left, #ffffff88, #cccccc55) border-box;
+  color: #ffffff; 
+}
+
+.card.substancia.sal p,
+.card.substancia.sal h3 {
+  color: #ffffff;
+}
+
+/* MERCURIUS — água + ar */
+.card.substancia.mercurius {
+  background:
+    linear-gradient(145deg, #3bb8ffcc, #cfd8e6aa, #14161a) padding-box,
+    linear-gradient(to top left, #a8dcff55, #ffffff44) border-box;
 }
 
 /* TAROT ESPECÍFICO */
 .tarot-card img {
   width: 100%;
   height: auto;
-  max-height: 220px;
+  max-height: 333px;
   object-fit: contain;
-
   border-radius: 6px;
   margin: 12px 0;
 }
+.card.tarot img{
+  width: 100%;
+  height: auto;
+  max-height: 333px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+.card.tarot.chakra {
+  border: 1px solid transparent;
+}
+
+/* Tiragem 14 */
+.card.chakra {
+  border: 1px solid transparent;
+}
+
+/* 1 - Vermelho */
+.card.tarot.vermelho {
+  background:
+    linear-gradient(145deg, #ff3b3bcc, #14161a) padding-box,
+    linear-gradient(to top left, #ff8a8a55, #ffffff22) border-box;
+}
+
+/* 2 - Laranja */
+.card.tarot.laranja {
+  background:
+    linear-gradient(145deg, #ff8c3acc, #14161a) padding-box,
+    linear-gradient(to top left, #ffc27a55, #ffffff22) border-box;
+}
+
+/* 3 - Amarelo */
+.card.tarot.amarelo {
+  background:
+    linear-gradient(145deg, #ffd93bcc, #14161a) padding-box,
+    linear-gradient(to top left, #fff2a855, #ffffff22) border-box;
+}
+
+/* 4 - Verde */
+.card.tarot.verde {
+  background:
+    linear-gradient(145deg, #3bd16fcc, #14161a) padding-box,
+    linear-gradient(to top left, #a8f0c555, #ffffff22) border-box;
+}
+
+/* 5 - Azul claro */
+.card.tarot.azul-claro {
+  background:
+    linear-gradient(145deg, #3bb8ffcc, #14161a) padding-box,
+    linear-gradient(to top left, #a8dcff55, #ffffff22) border-box;
+}
+
+/* 6 - Índigo */
+.card.tarot.indigo {
+  background:
+    linear-gradient(145deg, #5a4bffcc, #14161a) padding-box,
+    linear-gradient(to top left, #b0a8ff55, #ffffff22) border-box;
+}
+
+/* 7 - Violeta */
+.card.tarot.violeta {
+  background:
+    linear-gradient(145deg, #b84bffcc, #14161a) padding-box,
+    linear-gradient(to top left, #e0a8ff55, #ffffff22) border-box;
+}
+
+/*
+//Tarot LUZ 
+.card.tarot.luz {
+  box-shadow: 0 0 20px rgba(255,255,255,0.08);
+}
+
+//Tarot SOMBRA 
+.card.tarot.sombra {
+  filter: brightness(0.85);
+}*/
 
 /* HEADER TAROT */
 .tarot-header {
@@ -176,7 +405,7 @@ button:hover {
 
 .tarot-numero {
   font-size: 1rem;
-  color: #666;
+  color: #ffffff;
   letter-spacing: 1px;
 }
 /*.card.tarot-card p {
@@ -190,14 +419,14 @@ button:hover {
   }
 
   .left-panel {
-    width: 100%;
+    width: stretch;
     height: auto;
     position: relative;
     border-right: none;
   }
 
   .right-panel {
-    width: 100%;
+    width: stretch;
     padding: 40px 20px;
   }
    .main-buttons {
@@ -229,6 +458,11 @@ button:hover {
 .card {
     padding: 13px;
     width: 200px;
+   }
+  }
+@media (max-width: 525px) {
+.card {
+    width: stretch;
    }
   }
 @keyframes reveal {

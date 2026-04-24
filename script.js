@@ -39,25 +39,25 @@ function gerarOraculo() {
   const a = randomItem(arquetipos);
 
   mostrarResultado(`
-    <div class="card">
+    <div class="card substancia ${s.tipo}">
       <h4 class="card-label">Substância</h4>
       <h3>${s.simbolo} ${s.nome}</h3>
       <p>${s.descricao}</p>
     </div>
 
-    <div class="card">
+    <div class="card elemento ${e.tipo}">
       <h4 class="card-label">Elemento</h4>
       <h3>${e.simbolo} ${e.nome}</h3>
       <p>${e.descricao}</p>
     </div>
    
-    <div class="card">
+    <div class="card chakra ${c.cor}">
       <h4 class="card-label">Chakra</h4>
       <h3>${c.simbolo} ${c.nome} ${c.numero}</h3>
       <p>${c.descricao}</p>
     </div>
 
-    <div class="card">
+    <div class="card arquetipo ${a.cor}">
       <h4 class="card-label">Arquétipo</h4>
       <h3>${a.simbolo} ${a.nome}</h3>
       <p>${a.descricao}</p>
@@ -69,7 +69,7 @@ function gerarOraculo() {
 function gerarElemento() {
   const e = randomItem(elementos);
   mostrarResultado(`
-    <div class="card">
+    <div class="card elemento ${e.tipo}">
       <h4 class="card-label">Elemento</h4>
       <h3>${e.simbolo} ${e.nome}</h3>
       <p>${e.descricao}</p>
@@ -80,7 +80,7 @@ function gerarElemento() {
 function gerarSubstancia() {
   const s = randomItem(substancias);
   mostrarResultado(`
-    <div class="card">
+    <div class="card substancia ${s.tipo}">
       <h4 class="card-label">Substância</h4>
       <h3>${s.simbolo} ${s.nome}</h3>
       <p>${s.descricao}</p>
@@ -91,7 +91,7 @@ function gerarSubstancia() {
 function gerarChakra() {
   const c = randomItem(chakras);
   mostrarResultado(`
-    <div class="card">
+    <div class="card chakra ${c.cor}">
       <h4 class="card-label">Chakra</h4>
       <h3>${c.numero} ${c.nome} ${c.simbolo}</h3>
       <p>${c.descricao}</p>
@@ -102,7 +102,7 @@ function gerarChakra() {
 function gerarArquetipo() {
   const a = randomItem(arquetipos);
   mostrarResultado(`
-    <div class="card">
+    <div class="card arquetipo ${a.cor}">
       <h4 class="card-label">Arquétipo</h4>
       <h3>${a.simbolo} ${a.nome}</h3>
       <p>${a.descricao}</p>
@@ -114,8 +114,22 @@ function gerarArquetipo() {
 function gerarTarot(n) {
   let html = `<div class="cards">`;
 
+  let baralho = [...tarot]; // cópia
+
   for (let i = 0; i < n; i++) {
-    const carta = randomItem(tarot);
+
+    let index;
+
+    if (n === 1) {
+      // completamente random (pode repetir entre tiragens)
+      index = Math.floor(Math.random() * tarot.length);
+      carta = tarot[index];
+    } else {
+      // sem repetição
+      index = Math.floor(Math.random() * baralho.length);
+      carta = baralho[index];
+      baralho.splice(index, 1); // remove do baralho
+    }
 
     html += `
       <div class="card tarot-card">
@@ -133,6 +147,38 @@ function gerarTarot(n) {
 
   revelarHTML("tarot", html);
 }
+
+function gerarTiragem14() {
+
+  const pool = tarot.filter(c => c.tiragem14);
+  let baralho = [...pool];
+
+  let html = `<div class="cards">`;
+
+  for (let i = 0; i < 3; i++) {
+
+    const index = Math.floor(Math.random() * baralho.length);
+    const carta = baralho[index];
+
+    baralho.splice(index, 1); // remove → sem repetição
+
+    html += `
+      <div class="card tarot chakra ${carta.chakra} ${carta.energia}">
+        <div class="tarot-header">
+          <span class="tarot-numero">${carta.numero}</span>
+          <h3>${carta.nome}</h3>
+        </div>
+        <img src="${carta.imagem}" onclick="abrirZoom('${carta.imagem}')" />
+        <p>${carta.descricao}</p>
+      </div>
+    `;
+  }
+
+  html += `</div>`;
+
+  revelarHTML("tarot", html);
+}
+
 function abrirZoom(src) {
   const overlay = document.getElementById("zoom-overlay");
   const img = document.getElementById("zoom-img");
