@@ -3,7 +3,7 @@ const tarot = [
     nome: "O Louco",
     numero: "",
     imagem: "images/tarot/louco.jpg",
-    descricao: "Espírito • Espontaneidade • Aventura",
+    descricao: "Espírito • Criança • Liberdade",
     chakra:"violeta",
     energia:"Feminino",
     tiragem14:true
@@ -21,7 +21,7 @@ const tarot = [
     nome: "A Papisa",
     numero: "II",
     imagem: "images/tarot/papisa.jpg",
-    descricao: " - • - • - ",
+    descricao: "Instrospeção • Reflexão • Escuta",
     chakra:"azul-claro",
     energia:"Feminino",
     tiragem14:true
@@ -30,7 +30,7 @@ const tarot = [
     nome: "A Rainha",
     numero: "III",
     imagem: "images/tarot/rainha.jpg",
-    descricao: " - • - • - ",
+    descricao: "Intuição • Audácia • Inspiração",
     chakra:"indigo",
     energia:"Masculino",
     tiragem14:true
@@ -39,7 +39,7 @@ const tarot = [
     nome: "O Rei",
     numero: "IIII",
     imagem: "images/tarot/rei.jpg",
-    descricao: " - • - • - ",
+    descricao: "Visão Estratégica • Autoridade • Ideais",
     chakra:"indigo",
     energia:"Feminino",
     tiragem14:true
@@ -48,7 +48,7 @@ const tarot = [
     nome: "O Papa",
     numero: "V",
     imagem: "images/tarot/papa.jpg",
-    descricao: " - • - • - ",
+    descricao: "Espiritualidade • Verbo • Fé ",
     chakra:"azul-claro",
     energia:"Masculino",
     tiragem14:true
@@ -57,14 +57,14 @@ const tarot = [
     nome: "Os Enamorados",
     numero: "VI",
     imagem: "images/tarot/enamorados.jpg",
-    descricao: " - • - • - ",
+    descricao: "Escolha • Vínculos • Relacionamento Interno ",
     tiragem14:false
   }
   ,{
     nome: "O Carro",
     numero: "VII",
     imagem: "images/tarot/carro.jpg",
-    descricao: "Movimento • Início • Guerreiro",
+    descricao: "Protagonista • Início • Guerreiro",
     chakra:"verde",
     energia:"Masculino",
     tiragem14:true
@@ -73,14 +73,14 @@ const tarot = [
     nome: "A Justiça",
     numero: "VIII",
     imagem: "images/tarot/justica.jpg",
-    descricao: " - • - • - ",
+    descricao: "Justiça • Equilibrio • Coerência",
     tiragem14:false
   }
   ,{
     nome: "O Eremita",
     numero: "VIIII",
     imagem: "images/tarot/eremita.jpg",
-    descricao: " - • - • - ",
+    descricao: "Sábio • Maturidade • Discernimento ",
     chakra:"verde",
     energia:"Masculino",
     tiragem14:true
@@ -89,7 +89,7 @@ const tarot = [
     nome: "Roda da Fortuna ",
     numero: "X",
     imagem: "images/tarot/rodafortuna.jpg",
-    descricao: " - • - • - ",
+    descricao: "Prosperidade • Merecimento • Ritmo ",
     chakra:"amarelo",
     energia:"Masculino",
     tiragem14:true
@@ -98,7 +98,7 @@ const tarot = [
     nome: "A Força",
     numero: "XI",
     imagem: "images/tarot/forca.jpg",
-    descricao: " - • - • - ",
+    descricao: "Serviço • Disciplina • Reinos naturais ",
     chakra:"amarelo",
     energia:"Feminino",
     tiragem14:true
@@ -107,21 +107,21 @@ const tarot = [
     nome: "O Pendurado",
     numero: "XII",
     imagem: "images/tarot/pendurado.jpg",
-    descricao: " - • - • - ",
+    descricao: "Perspetiva • Reviravolta • Rendição",
     tiragem14:false
   }
   ,{
     nome: "Carta sem nome",
     numero: "XIII",
     imagem: "images/tarot/semnome.jpg",
-    descricao: " - • - • - ",
+    descricao: "Desapego • Mudança radical • Desilusão", 
     tiragem14:false
   }
   ,{
     nome: "A Temperança",
     numero: "XIIII",
     imagem: "images/tarot/temperanca.jpg",
-    descricao: " - • - • - ",
+    descricao: "Conhecimento sagrado • Transmutação • Comunicação",
     chakra:"laranja",
     energia:"Masculino",
     tiragem14:true
@@ -130,21 +130,21 @@ const tarot = [
     nome: "O Diabo",
     numero: "XV",
     imagem: "images/tarot/diabo.jpg",
-    descricao: " - • - • - ",
+    descricao: "Manipulação • Controlo • Prisões",
     tiragem14:false
   }
   ,{
     nome: "A Torre",
     numero: "XVI",
     imagem: "images/tarot/torre.jpg",
-    descricao: " - • - • - ",
+    descricao: "Reset • Colapso do ego • Crise",
     tiragem14:false
   }
   ,{
     nome: "A Estrela Guia",
     numero: "XVII",
     imagem: "images/tarot/estrela.jpg",
-    descricao: " - • - • - ",
+    descricao: "Esperança • Pureza • Autenticidade",
     chakra:"laranja",
     energia:"Feminino",
     tiragem14:true
@@ -153,21 +153,21 @@ const tarot = [
     nome: "A Lua",
     numero: "XVIII",
     imagem: "images/tarot/lua.jpg",
-    descricao: " - • - • - ",
+    descricao: "Padrões emocionais • Raizes (Mãe) • Memórias ",
     tiragem14:false
   }
   ,{
     nome: "O Sol",
     numero: "XVIIII",
     imagem: "images/tarot/sol.jpg",
-    descricao: " - • - • - ",
+    descricao: "Carências ancestrais • Raizes (Pai) • Proteção",
     tiragem14:false
   }
   ,{
     nome: "O Julgamento",
     numero: "XX",
     imagem: "images/tarot/julgamento.jpg",
-    descricao: " - • - • - ",
+    descricao: "Superação • Rodar da chave • Novo chamado",
     chakra:"vermelho",
     energia:"Masculino",
     tiragem14:true
@@ -176,7 +176,7 @@ const tarot = [
     nome: "O Mundo",
     numero: "XXI",
     imagem: "images/tarot/mundo.jpg",
-    descricao: " - • - • - ",
+    descricao: "Pendências • Portal • Integração",
     chakra:"vermelho",
     energia:"Feminino",
     tiragem14:true
